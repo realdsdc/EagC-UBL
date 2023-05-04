@@ -3,7 +3,16 @@
   <head>
     <title>about:blank</title>
     <style>
-      iframe {
+      #parent-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+      #embedded-website {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         border: none;
@@ -11,18 +20,8 @@
     </style>
   </head>
   <body>
-    <iframe id="embedded-website" src="https://realdsdc.github.io/games10998/MC.html"></iframe>
-    <script>
-      var iframe = document.getElementById("embedded-website");
-      iframe.setAttribute("allowfullscreen", true);
-      iframe.setAttribute("allow", "fullscreen");
-      iframe.style.position = "absolute";
-      iframe.style.top = "0";
-      iframe.style.left = "0";
-      iframe.style.bottom = "0";
-      iframe.style.right = "0";
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
-    </script>
+    <div id="parent-container">
+      <iframe id="embedded-website" src="https://realdsdc.github.io/games10998/MC.html"></iframe>
+    </div>
   </body>
 </html>
